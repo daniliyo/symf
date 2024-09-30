@@ -1,3 +1,4 @@
+```
 git clone git@github.com:daniliyo/symf.git .
 
 cd symf
@@ -5,6 +6,7 @@ cd symf
 cp .env.dist .env
 
 cp app/.env.dev app/.env
+```
 
 After
 ```
