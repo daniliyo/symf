@@ -8,13 +8,14 @@ cp app/.env.dev app/.env
 
 After
 ```
-docker-compose up
+docker-compose up -d
 ```
 
 After booting the container, you can use composer and the symfony cli insight the php-apache container:
 ```
 docker exec -it symfony-apache-php bash
 composer install
+php bin/console doctrine:migrations:migrate
 ```
 
 Urls
