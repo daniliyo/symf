@@ -39,7 +39,6 @@ class CreateResultService
 
     public function createResultsForPlayOff(array $teamsA, array $teamsB)
     {
-        echo DivisionEnum::PLAY_OFF->value;
         $this->statistics_arr = $this->setStartStatistics(array_merge($teamsA, $teamsB), DivisionEnum::PLAY_OFF);
 
         $playOffTeamArr = [];
@@ -105,8 +104,6 @@ class CreateResultService
             $statistics_arr[$team->getName()]['goal'] = 0;
             $statistics_arr[$team->getName()]['point'] = 0;
             $statistics_arr[$team->getName()]['division'] = is_null($division) ? $team->getDivision() : $division->value;
-        echo '!';
-        echo $statistics_arr[$team->getName()]['division'];
         }
 
         return $statistics_arr;
